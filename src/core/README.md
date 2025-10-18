@@ -30,7 +30,7 @@ export { VectorDBService, VectorDBConfig, VectorDocument, SearchResult } from '.
 export { BaseVectorService, BaseSearchOptions, BaseSearchResult } from './base-vector-service';
 
 // AI and Embedding Services
-export { EmbeddingService, EmbeddingConfig, EmbeddingProvider } from './embedding-service';
+export { EmbeddingService, EmbeddingConfig, EmbeddingProvider, OpenAIEmbeddingProvider } from './embedding-service';
 export { AIProvider, AIResponse, IntentAnalysisResult, AIProviderConfig } from './ai-provider.interface';
 export { createAIProvider, AIProviderFactory } from './ai-provider-factory';
 
@@ -44,7 +44,7 @@ export { MemorySystem } from './memory';
 
 // Pattern and Policy Types and Operations
 export { OrganizationalPattern, CreatePatternRequest } from './pattern-types';
-export { BaseOrganizationalEntity, PolicyIntent, CreatePolicyIntentRequest } from './organizational-types';
+export { BaseOrganizationalEntity, PolicyIntent, CreatePolicyIntentRequest, DeployedPolicyReference } from './organizational-types';
 export { validatePattern, createPattern, serializePattern, deserializePattern } from './pattern-operations';
 ```
 
