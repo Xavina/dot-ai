@@ -239,6 +239,7 @@ A: No, all three types require Vector DB for semantic storage and retrieval. Thi
 - **[Pattern Management Guide](pattern-management-guide.md)** - Creating organizational deployment standards  
 - **[Policy Management Guide](policy-management-guide.md)** - Implementing governance and compliance requirements
 - **[MCP Setup Guide](mcp-setup.md)** - Initial configuration for all organizational data features
+- **[Core Services Architecture](core-services-architecture.md)** - Technical reference for service implementations
 
 ---
 
