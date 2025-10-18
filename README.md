@@ -154,6 +154,9 @@ This video explains the platform engineering problem and demonstrates the Kubern
 - **[MCP Setup Guide](docs/mcp-setup.md)** - Complete configuration instructions for AI tools integration
 - **[Tools and Features Overview](docs/mcp-tools-overview.md)** - Comprehensive guide to all available tools and features
 
+### 🏗️ Architecture & Development
+- **[Core Services Architecture](docs/core-services-architecture.md)** - Complete reference for all core services, their locations, and relationships
+
 ## Troubleshooting
 
 ### MCP Issues
