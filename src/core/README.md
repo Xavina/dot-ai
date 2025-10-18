@@ -22,17 +22,30 @@ This directory contains all core services for the DevOps AI Toolkit.
 All public services are exported from `index.ts`:
 
 ```typescript
+// Vector Database Services
 export { CapabilityVectorService, ResourceCapability, CapabilitySearchOptions } from './capability-vector-service';
 export { PatternVectorService, PatternSearchOptions, PatternSearchResult } from './pattern-vector-service';
 export { PolicyVectorService, PolicySearchOptions, PolicySearchResult } from './policy-vector-service';
 export { VectorDBService, VectorDBConfig, VectorDocument, SearchResult } from './vector-db-service';
 export { BaseVectorService, BaseSearchOptions, BaseSearchResult } from './base-vector-service';
+
+// AI and Embedding Services
 export { EmbeddingService, EmbeddingConfig, EmbeddingProvider } from './embedding-service';
+export { AIProvider, AIResponse, IntentAnalysisResult, AIProviderConfig } from './ai-provider.interface';
+export { createAIProvider, AIProviderFactory } from './ai-provider-factory';
+
+// Discovery and Schema Services
 export { KubernetesDiscovery } from './discovery';
 export { SchemaParser, ManifestValidator, ResourceRecommender } from './schema';
+
+// Workflow and Memory Services
 export { WorkflowEngine } from './workflow';
 export { MemorySystem } from './memory';
-// ... and more
+
+// Pattern and Policy Types and Operations
+export { OrganizationalPattern, CreatePatternRequest } from './pattern-types';
+export { BaseOrganizationalEntity, PolicyIntent, CreatePolicyIntentRequest } from './organizational-types';
+export { validatePattern, createPattern, serializePattern, deserializePattern } from './pattern-operations';
 ```
 
 ### How to use services?
@@ -49,10 +62,12 @@ import { CapabilityVectorService } from '../core';
 
 For comprehensive information about all services:
 
-- **[Core Services Architecture](../../docs/core-services-architecture.md)** - Complete reference guide
-- **[Capability Management Guide](../../docs/mcp-capability-management-guide.md)** - Using CapabilityVectorService
-- **[Pattern Management Guide](../../docs/pattern-management-guide.md)** - Using PatternVectorService
-- **[Policy Management Guide](../../docs/policy-management-guide.md)** - Using PolicyVectorService
+- **[Core Services Architecture](../../docs/core-services-architecture.md)** - Complete technical reference for all services
+- **[Capability Management Guide](../../docs/mcp-capability-management-guide.md)** - User guide for working with capabilities
+- **[Pattern Management Guide](../../docs/pattern-management-guide.md)** - User guide for deployment patterns
+- **[Policy Management Guide](../../docs/policy-management-guide.md)** - User guide for governance policies
+
+*Note: User guides focus on MCP tool usage. For technical details on service implementation and APIs, see the Core Services Architecture guide.*
 
 ## Service Categories
 
